@@ -36,7 +36,7 @@ const App = () => {
       setImages((prev) => [...prev, ...data.results]);
       setPage(nextPage);
     } catch (err) {
-      setError("Daha fazla resim yüklenemedi!");
+      setError("Daha fazla resim yüklenemedi! "+ err);
     } finally {
       setIsLoading(false);
     }
@@ -55,7 +55,7 @@ const App = () => {
       const data = await response.json();
       setImages(data.results);
     } catch (err) {
-      setError("Resimler yüklenemedi!");
+      setError("Resimler yüklenemedi!  : " + err);
     } finally {
       setIsLoading(false);
     }
