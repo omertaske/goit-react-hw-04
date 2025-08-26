@@ -1,18 +1,9 @@
 import React from "react";
-import { RotatingLines } from "react-loader-spinner";
 
 const Loader = () => {
   return (
     <div className="flex justify-center items-center mt-6">
-      <RotatingLines
-        visible={true}
-        height="60"
-        width="60"
-        color="blue"
-        strokeWidth="5"
-        animationDuration="0.75"
-        ariaLabel="loading"
-      />
+      <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent border-solid rounded-full animate-spin"></div>
     </div>
   );
 };
